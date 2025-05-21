@@ -1,0 +1,16 @@
+/* weather.css */
+header { display: flex; justify-content: space-between; align-items: center; padding: 20px; }
+input { padding: 10px; }
+.weather-details, .forecast { padding: 20px; }
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.forecast-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.forecast-grid div { text-align: center; }
+img { width: 50px; }
