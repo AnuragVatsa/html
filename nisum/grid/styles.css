@@ -1,0 +1,12 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 100px);
+  gap: 10px;
+}
+.item {
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

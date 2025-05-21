@@ -1,0 +1,9 @@
+.product-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+}
+img { width: 100%; height: auto; }
+.price { font-weight: bold; }
+button { background-color: blue; color: white; padding: 10px; border: none; }

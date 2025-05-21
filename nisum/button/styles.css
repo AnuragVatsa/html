@@ -1,0 +1,12 @@
+.fancy-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(to right, blue, purple);
+  color: white;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.fancy-btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(to right, darkblue, darkpurple);
+}
