@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory Management System</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        button {
+            background-color: #0e3bcf;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        l1 {
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        th {
+            background-color: #dddddd;
+            color: rgb(9, 9, 9);
+            padding: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 300px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #143680;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        .sidenav a {
+            padding: 6px 6px 6px 32px;
+            font-size: 25px;
+            display: block;
+            color: #e89473c7;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .main {
+            margin-left: 300px;
+
+            @media screen and (max-height: 450px) {
+                .sidenav {
+                    padding-top: 15px;
+                }
+
+                .sidenav a {
+                    font-size: 18px;
+                    
+                }
+            }
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="sidenav">
+        <l1>Inventory Management System</l1>
+        <a href="#">Add Inventory</a>
+        <a href="#">Inventory Actions</a>
+
+    </div>
+    <div class="main">
+        <h1>Inventory Dashboard </h1>
+        <h2>Add Inventory</h2>
+        <form action="/add" method="POST">
+            <button type="submit">Add Item</button>
+            <br>
+            <br>
+            <input type="text" id="SKU" placeholder="SKU" required />
+            <input type="text" id="location" placeholder="location" required />
+            <input type="number" id="quantity" placeholder="quantity" required />
+            <br>
+            <h2>Inventory Actions</h2>
+            <select id="action" name="action">
+                <option value="Adjust Inventory">Adjust Inventory</option>
+                <option value="Cancel">Cancel Inventory</option>
+                <option value="Reserve">Reserve Inventory for Order</option>
+                <option value="allocate">Allocate Inventory for Order</option>
+                <input type="text" id="SKU" placeholder="SKU" required />
+                <input type="number" id="quantity" placeholder="quantity" required />
+                <input type="number" id="orderid" placeholder="Order ID(if applicable)" required />
+                <button type="apply">Apply Action</button>
+            </select>
+            <br>
+            <table>
+                <thead>
+                    <tr>
+                        <th>SKU</th>
+                        <th>Location</th>
+                        <th>Available Qty</th>
+                        <th>Reserved Qty</th>
+                        <th>Allocated Qty</th>
+                    </tr>
+                </thead>
+                <tbody id="inventory-table">
+                    <!-- Inventory items will be dynamically added here -->
+                </tbody>
+            </table>
+    </div>
+</body>
+
+</html>

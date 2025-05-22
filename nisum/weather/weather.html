@@ -10,12 +10,12 @@
 <body>
   <header>
     <h1>Weather App</h1>
-    <input type="text" placeholder="Enter city">
+    <input type="text" id="countryInput" placeholder="Enter country">
   </header>
   <main>
     <section class="weather-details">
       <h2>Current Weather</h2>
-      <div class="details-grid">
+      <div id="weatherDetails"></div>
         <div><img src="sun.png" alt="Sun"> 25°C</div>
         <div>Humidity: 60%</div>
         <div>Wind: 10 km/h</div>
@@ -32,5 +32,7 @@
       </div>
     </section>
   </main>
+  <script src="weather.js"></script>
 </body>
+
 </html>
